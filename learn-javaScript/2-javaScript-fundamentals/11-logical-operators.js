@@ -10,53 +10,52 @@
 
 /* Task 6 */
 
-var age = Number(prompt('What is the age?', '13'));
+let age = Number(prompt('What is the age?', '13'));
 
 if ( age >= 14 && age <= 90) {
-    alert('Accepted');
+  alert('Accepted');
 } else {
-    alert('Failed');
+  alert('Failed');
 }
 
 /* Task 7 */
 
-var age = Number(prompt('What is the age?', '13'));
+let age = Number(prompt('What is the age?', '13'));
 
 if (age < 14 && age > 90) {
-    alert('Accepted');
+  alert('Accepted');
 } else {
-    alert('Failed');
+  alert('Failed');
 }
 
 // Other variant
 
-var age = Number(prompt('What is the age?', '13'));
+let age = Number(prompt('What is the age?', '13'));
 
 if (!(age >= 14 && age <= 90)) {
-    alert('Accepted');
+  alert('Accepted');
 } else {
-    alert('Failed');
+  alert('Failed');
 }
 
 /* Task 8 - no coding */
 
 /* Task 9 */
 
-var login = prompt('Who\'s there?', 'Admin');
+let login = prompt('Who\'s there?', 'Admin');
 
 if (!login) {
-    alert('Canceled');
+  alert('Canceled');
 } else if (login == 'Admin') {
-    var password = prompt('Password?', 'TheMaster');
+  let password = prompt('Password?', 'TheMaster');
 
-    if (!password) {
-        alert('Canceled');
-    } else if (password == 'TheMaster') {
-        alert('Welcome!');
-    } else {
-        alert('Wrong password');
-    }
+  if (!password) {
+    alert('Canceled');
+  } else if (password == 'TheMaster') {
+    alert('Welcome!');
+  } else {
+    alert('Wrong password');
+  }
 } else {
-    alert('I don\'t know you');
+  alert('I don\'t know you');
 }
-    
