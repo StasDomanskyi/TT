@@ -4,8 +4,7 @@ let arr2 = [1, 2, 3, 4, 1, 1];
 function getUnique(arr) {
   let initialArr = arr.slice();
   let result = [];
-  
-  
+   
   while(initialArr.length) {
     let currentItemArr = initialArr.splice(0, 1);
     let matchingPosition = initialArr.indexOf(currentItemArr[0]);

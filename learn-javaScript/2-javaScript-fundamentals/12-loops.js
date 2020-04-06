@@ -7,9 +7,9 @@
 /* Task 4 */
 
 for (let i = 2; i <= 10; i++) {
-    if(i % 2 === 0) {
-        alert(i);
-    }
+  if(i % 2 === 0) {
+    alert(i);
+  }
 }
 
 /* Task 5 */
@@ -17,16 +17,16 @@ for (let i = 2; i <= 10; i++) {
 let i = 0;
 
 while (i < 3) {
-    alert ( `number ${i}`);
-    i++;
+  alert ( `number ${i}`);
+  i++;
 }
 
 /* Task 6 */
 
 while ( i <= 100 ) {
-    let i = prompt('Enter the number', '50');
+  let i = prompt('Enter the number', '50');
 
-    if (i === null || i === '' || i > 100) break;
+  if (i === null || i === '' || i > 100) break;
 }
 
 // Site solution 
@@ -39,13 +39,13 @@ do {
 
 /* Task 7 */
 
-var n = prompt('What\'s n?', 13);
+let n = prompt('What\'s n?', 13);
 
 outer:
 for (let i = 2; i <= n; i++) {
-    for (let j = 2; j < i; j++) {
-        if (i % j === 0) continue outer;
-    }
+  for (let j = 2; j < i; j++) {
+    if (i % j === 0) continue outer;
+  }
 
-    console.log(i);
+  console.log(i);
 }
