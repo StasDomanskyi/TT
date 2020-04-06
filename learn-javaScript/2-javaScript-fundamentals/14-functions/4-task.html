@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function pow(x, n) {
+      let poweredX = 1;
+      for (let i = 1; i <= n; i++) {
+        poweredX *= x;
+      }
+
+      return poweredX;
+    }
+
+    let x = +prompt('Enter x', 3);
+    let n = +prompt('Enter n', 4);
+
+    alert(pow(x, n));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
