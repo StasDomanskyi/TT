@@ -25,4 +25,3 @@ function min(a, b) {
 min(2, 5);
 
 /* Task 4 in 4-task.html */
-
