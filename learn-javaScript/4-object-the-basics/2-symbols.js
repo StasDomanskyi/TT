@@ -22,3 +22,18 @@ Object.keys(user); // ["name"]
 
 let foreignUser = Object.assign({}, user); 
 foreignUser; // {name: "Jack", Symbol(first symbol): "value for symbol", Symbol(first symbol): "value for another symbol"}
+
+
+/* Global Symbols */
+
+let glOne = Symbol.for('The global symbol');
+let glTwo = Symbol.for('The global symbol');
+let glThree = Symbol.for('Absolutely different');
+
+let local = Symbol('The global symbol'); // local indeed
+
+glOne === glTwo; // true
+
+local === glOne; // false
+
+Symbol.keyFor(glTwo) // "The global symbol"
