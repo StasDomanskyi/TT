@@ -1,6 +1,7 @@
 /* Task 1 */
 
 let user  = {};
+
 user.name = 'John';
 user.surname = 'Smith';
 user.name = 'Pete';
@@ -18,15 +19,15 @@ function isEmpty(obj) {
   return true;
 }
 
-// Site solution
+  // Site solution
 
-/* function isEmpty(obj) {
-  for (let key in obj) {
-    // if the loop has started, there is a property
-    return false;
-  }
-  return true;
-} */
+  /* function isEmpty(obj) {
+    for (let key in obj) {
+      // if the loop has started, there is a property
+      return false;
+    }
+    return true;
+  } */
 
 isEmpty(schedule);
 
@@ -55,7 +56,6 @@ let menu = {
   height: 300,
   title: "My menu"
 };
-
 
 function multiplyNumeric(obj) {
   for (let key in obj) {
