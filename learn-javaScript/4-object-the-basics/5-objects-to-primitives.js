@@ -8,3 +8,39 @@ let obj2 = {
 
 obj1 - obj2; // NaN
 obj1 + obj2; // "[object Object][object Object]"
+
+/*************************************************************************/
+
+let hintObj = {
+  name: 'Hint object',
+  count: 1400,
+
+  [Symbol.toPrimitive](hint) {
+    if (hint === 'number') return this.count / 2;
+    if(hint === 'string') return 'Resulting: ' + this.name;
+    if(hint === 'default') return 'Here is default: ' + this.count * 2;
+  }
+};
+
+hintObj - 100; // 600 "number" hint
+'Hello World!' + hintObj; // '700 Hello World!' // "default" hint
+alert(hintObj); // 'Resulting: Hint object'; // "string" hint
+
+/*************************************************************************/
+
+let user = {
+  name: 'Harry',
+  age: 30,
+
+  toString() {
+    return this.name + ' Potter';
+  },
+
+  valueOf() {
+    return this.age + 0.5;
+  },
+};
+
+user + 15; // 45.5
+user - 15; // 15.5
+String(user) // "Harry Potter"
