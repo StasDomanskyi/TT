@@ -1,21 +1,19 @@
 let user = {
-  name: 'Ilya',
-  hi() {
+  name: 'John',
+  showUser() {
+    this.name = this.name.toUpperCase();
+
     (() => {
-      console.info(this.name);
-    })();
-  }
+      this.surname = 'Conor';
+    })();   
+    
+    return this;
+  },
 };
 
-user.hi();
+user.showUser();
 
-/* Task 1 - no coding */
-
-/* Task 2 - no coding */
-
-/* Task 3 - no coding */
-
-/* Task 4 */
+/* Task 2 */
 
 let calculator = {
   read() {
@@ -36,7 +34,7 @@ calculator.read();
 calculator.sum();
 calculator.mul();
 
-/* Task 5 */
+/* Task 3 */
 
 let ladder = {
   step: 0,
