@@ -16,14 +16,14 @@ let hintObj = {
   count: 1400,
 
   [Symbol.toPrimitive](hint) {
-    if (hint === 'number') return this.count / 2;
     if(hint === 'string') return 'Resulting: ' + this.name;
-    if(hint === 'default') return 'Here is default: ' + this.count * 2;
+    if (hint === 'number') return this.count / 2;
+    if(hint === 'default') return this.count * 2;
   }
 };
 
-hintObj - 100; // 600 "number" hint
-'Hello World!' + hintObj; // '700 Hello World!' // "default" hint
+hintObj - 100; // 600 // "number" hint
+'Hello World!' + hintObj; // "Hello World!Here is default: 2800" // "default" hint
 alert(hintObj); // 'Resulting: Hint object'; // "string" hint
 
 /*************************************************************************/
