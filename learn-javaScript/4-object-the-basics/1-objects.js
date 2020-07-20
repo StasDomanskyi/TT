@@ -1,5 +1,4 @@
 /* Task 1 */
-
 let user  = {};
 
 user.name = 'John';
@@ -8,7 +7,6 @@ user.name = 'Pete';
 delete user.name;
 
 /* Task 2 */
-
 let schedule = {};
 
 function isEmpty(obj) {
@@ -20,10 +18,8 @@ function isEmpty(obj) {
 }
 
   // Site solution
-
   /* function isEmpty(obj) {
     for (let key in obj) {
-      // if the loop has started, there is a property
       return false;
     }
     return true;
@@ -31,10 +27,7 @@ function isEmpty(obj) {
 
 isEmpty(schedule);
 
-/* Task 3 - no coding */
-
-/* Task 4 */
-
+/* Task 3 */
 let salaries = {
   John: 100,
   Ann: 160,
@@ -49,8 +42,7 @@ for (let key in salaries) {
 
 sum;
 
-/* Task 5 */
-
+/* Task 4 */
 let menu = {
   width: 200,
   height: 300,

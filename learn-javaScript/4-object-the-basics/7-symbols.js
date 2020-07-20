@@ -37,3 +37,16 @@ glOne === glTwo; // true
 local === glOne; // false
 
 Symbol.keyFor(glTwo) // "The global symbol"
+
+/*********************************************************/
+
+function Constructor(name, age) {
+  this.name = name;
+  this.age = age;
+  this[Symbol.toPrimitive] = function(hint) {
+    return hint === "number" ? this.age : this.name;
+  };
+}
+
+let instance = new Constructor("John", 30);
+alert(instance);

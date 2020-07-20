@@ -1,8 +1,6 @@
 Without tasks:
-  2, 3, 5
+2, 3, 6, 7, 8
 
-
-For instance:
-  2-symbols.js
-  4-this.js
-  5-objects-to-primitives.js
+Examples:
+  2, 7, 8
+  
