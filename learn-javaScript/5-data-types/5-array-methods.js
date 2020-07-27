@@ -113,10 +113,122 @@ function copySorted(arr) {
 copySorted(arr);
 
 /* Task 6 */
+function Calculator() {
+  this.operators = ["+", "-"]; // can be key names for storing methods in objects
+  
+  this.handlers = [
+    function(a, b) {
+      return a + b;
+    },
+    function(a, b) {
+      return a - b;
+    },
+  ];
 
+  this.calculate = function(str) {
+    let expression = str.split(" ");
+    let a = +expression[0];
+    let b = +expression[2];
+    let operationIndex = this.operators.findIndex(item => item === expression[1]);
+    let result = this.handlers[operationIndex](a, b);
+
+    return result;
+  };
+
+  this.addMethod = function(mark, func) {
+    this.operators.push(mark);
+    this.handlers.push(func);
+  };
+}
+
+let calc = new Calculator();
+
+alert( calc.calculate("3 + 7") );
 
 /* Task 7 */
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ];
+
+let names = users.map(item => item.name);
 
 /* Task 8 */
+let john = { name: "John", surname: "Smith", id: 1 };
+let pete = { name: "Pete", surname: "Hunt", id: 2 };
+let mary = { name: "Mary", surname: "Key", id: 3 };
+
+let users = [ john, pete, mary ];
+
+let usersMapped = users.map(item => {
+  return ({
+    fullName: item.name + " " + item.surname,
+    id: item.id,
+  });
+});
+
+usersMapped;
 
 /* Task 9 */
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let arr = [ pete, john, mary ];
+
+sortByAge(arr);
+
+function sortByAge(arr) {
+  arr.sort((a,b) => a.age - b.age);
+}
+
+// now: [john, mary, pete]
+alert(arr[0].name); // John
+alert(arr[1].name); // Mary
+alert(arr[2].name); // Pete
+
+/* Task 10 */
+let arr = [1, 2, 3, 4, 5];
+
+function shuffle(arr) {
+  let multiplier = arr.length;
+  let orders = [];
+  let newArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let val = Math.floor(Math.random() * multiplier);
+    if (orders.includes(val)){
+      i--;
+      continue;
+    }
+    orders.push(val);
+  }
+
+  for(let j = 0; j < orders.length; j++) {
+    newArr.push(arr[orders[j]]);
+  }
+
+  arr.length = 0;
+  arr = arr.push(...newArr);
+}
+
+shuffle(arr);
+
+/* Task 11 */
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+let users = [ john, pete, mary ];
+
+function getAvarageAge(users) {
+  let summaryAge = users.reduce((acc, current) => acc + current.age, 0);
+  return +(summaryAge / users.length).toFixed(2);
+}
+
+getAvarageAge(users);
+
+/* Task 12 */
+
+/* Task 13 */
