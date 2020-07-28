@@ -230,5 +230,44 @@ function getAvarageAge(users) {
 getAvarageAge(users);
 
 /* Task 12 */
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+function unique(arr) {
+  let result = [];
+
+  for(let item of arr) {
+    if (result.includes(item)) continue;
+    result.push(item);
+  }
+
+  return result;
+}
+
+unique(strings);
 
 /* Task 13 */
+let users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+let usersById = groupById(users);
+
+function groupById(arr) {
+  let container = {};
+
+  for (let item of arr) {
+    container[item.id] = item;
+  }
+
+  return container;
+}
+
+/* function groupById(arr) {  // solutiomn from site
+  return arr.reduce((obj, item) => {
+    return obj[item.id] = item;
+  });
+} */
