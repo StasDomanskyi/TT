@@ -21,3 +21,10 @@ obj[Symbol.iterator] = function() {
 for(let item of obj) {
   console.info(item);
 }
+
+let arr = Array.from(obj); 
+/* ["A", "B", "C", "D", "E", "F", "G",
+    "H", "I", "J", "K", "L", "M", "N",
+    "O", "P", "Q", "R", "S", "T", "U",
+    "V", "W", "X", "Y", "Z"] 
+*/
