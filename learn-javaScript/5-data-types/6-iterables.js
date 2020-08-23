@@ -10,7 +10,8 @@ obj[Symbol.iterator] = function() {
 
     next() {
       return this.currentCharCode <= this.last ? {
-        done: false, value: String.fromCodePoint(this.currentCharCode++),
+        done: false,
+        value: String.fromCodePoint(this.currentCharCode++),
       } : {
         done: true,
       };
