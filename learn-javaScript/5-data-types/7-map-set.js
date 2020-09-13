@@ -36,6 +36,6 @@ function aclean(arr) {
   }
   
   return result;
-}
+} // better to solve through the map
 
 /* Task 3 - no coding */

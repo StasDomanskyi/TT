@@ -32,7 +32,7 @@ alert( counter() ); // 10 (instead of 11)
 
 /* Task 2 */
 let sum = function func(num) {     
-  func.result = 0;
+  func.result = 0; // simple let is enough
 
   function next(i) {
     func.result += i;
